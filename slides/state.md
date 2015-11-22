@@ -1,6 +1,9 @@
 ## State
 
 
+### State could be mutable
+
+
 ```js
 class Checkbox extends React.Component {
   constructor() {

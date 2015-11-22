@@ -9,29 +9,12 @@ class Anchor extends React.Component {
 ```
 
 ```js
-React.render(<Anchor href='http://yld.io' />, document.body);
-```
-
-
-Using interpolation:
-
-```js
-class Anchor extends React.Component {
-  render() {
-    return (<a href={this.props.href}>link</a>);
-  }
-}
-```
-
-```js
 let yldAddress = 'http://yld.io';
 <Anchor href={yldAddress} />
 ```
 
-
-### Types
-
-Unlike `HTML` you can use any variable type in the attributes
+<!-- Using Types :: Unlike `HTML` you can use any variable type in the attributes -->
+<!-- We could pass strings, booleans, objects, functions... -->
 
 
 #### Object
@@ -39,35 +22,17 @@ Unlike `HTML` you can use any variable type in the attributes
 ```js
 class Anchor extends React.Component {
   render() {
-    return (<a href={this.props.opts.href}>link</a>);
+    return (<a href={this.props.myObj.href}>link</a>);
   }
 }
 ```
 
 ```js
-let opts = {
+let myObj = {
   href: 'http://yld.io'
 };
 
-<Anchor opts={opts} />
-```
-
-
-#### String
-
-*as seen before*
-
-```js
-class Anchor extends React.Component {
-  render() {
-    return (<a href={this.props.opts.href}>link</a>);
-  }
-}
-```
-
-```js
-let yldAddress = 'http://yld.io';
-<Anchor href={yldAddress} />
+<Anchor myObj={myObj} />
 ```
 
 
@@ -86,24 +51,6 @@ let yldAddress = () => {
   return 'http://yld.io';
 };
 <Anchor href={yldAddress} />
-```
-
-
-#### Boolean
-
-```js
-class Anchor extends React.Component {
-  render() {
-    let shouldLinkToBlog = this.props.shouldLinkToBlog;
-    let href = shouldLinkToBlog ? 'http://blog.yld.io' : 'http://yld.io'
-    return (<a href={href}>link</a>);
-  }
-}
-```
-
-```js
-let shouldLinkToBlog = false;
-<Anchor blogLink={shouldLinkToBlog} />
 ```
 
 
@@ -164,8 +111,8 @@ Is going to generate:
 ```
 
 
-### `propTypes`
-
+### `propTypes (Validation)`
+<!-- **Only checked on developer mode** -->
 ```js
 class Anchor extends React.Component {
   render() {
@@ -193,9 +140,6 @@ Failed propType: Required prop `href` was not specified in `Anchor`.
 ```
 
 
-**Only checked on developer mode**
-
-
 ### ES6 spread operator
 
 ```js
@@ -215,9 +159,9 @@ var props = {
 
 <Anchor {...props} />
 ```
-
+Is going to generate:
 ```
-<a href='http://yld.io' target='_blank'>b</a>
+<a href='http://yld.io' target='_blank' />
 ```
 
 
@@ -226,4 +170,4 @@ var props = {
 `this.props` should **NEVER** be updated.
 
 
-### EXERCISE
+### DEMO

@@ -7,16 +7,13 @@
 #### [Forum](https://discuss.reactjs.org)
 
 
-#### [Slack](http://www.reactiflux.com)
+#### [Reactiflux](http://www.reactiflux.com)
 
 
 #### [Twitter](https://twitter.com/reactjs)
 
 
 #### [Reddit](https://www.reddit.com/r/reactjs/)
-
-
-#### [HN Equivalent](http://rss.reactloop.org)
 
 
 #### [Podcast](http://reactpodcast.com)
@@ -36,9 +33,3 @@
 
  * [react-material](http://berkeleytrue.github.io/react-material/)
  * [material-ui](http://material-ui.com/)
-
-
-#### d3
-
- * [react-d3](http://reactiva.github.io/react-d3-website/)
- * [codesuki/react-d3-components](https://github.com/codesuki/react-d3-components)
