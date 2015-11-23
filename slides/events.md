@@ -20,44 +20,40 @@ class Anchor extends React.Component {
 [more supported events](https://facebook.github.io/react/docs/events.html)
 
 
-`React.initializeTouchEvents(true)`
-
-Note: because if you support touch events you'll when you click you need to wait to see if its a touch and hold
-
-
 ### Component <-> Component
 
-Note: comunication between components
+Note: communication between components
 
 
 ```js
-class Anchor extends React.Component {
+class HelloFactory extends React.Component {
   onClick() {
-    this.props.onHey('HEY');
+    this.props.onHello('Hello, Webcamp!');
   }
   render() {
-    return (<button onClick={this.onClick.bind(this)}>Build an "Hey"</button>);
+    return (
+      <button onClick={this.onClick.bind(this)}>
+        Build an "Hello"
+      </button>
+    );
   }
 };
 ```
 ```js
 class Anchor extends React.Component {
-  gotHey(msg) {
+  gotHello(msg) {
     window.alert(msg);
   },
   render() {
-    return (<HeyMachine onHey={this.gotHey.bind(this)} />);
+    return (<HelloFactory onHello={this.gotHello.bind(this)} />);
   }
 };
 ```
 
-Note: As you can see in this example, `HeyMachine` expects to receive an `onHey` property. That property should be a function. Then, it listens to the `onClick` event from the `<button>`. When an user clicks on the `<button>`, `HeyMachine.onClick` is invoked. There, `HeyMachine` invokes `this.props.onHey` that happens to be `App.gotHey`.
+Note: As you can see in this example, `HelloFactory` expects to receive an `onHello` property. That property should be a function. Then, it listens to the `onClick` event from the `<button>`. When an user clicks on the `<button>`, `HelloFactory.onClick` is invoked. There, `HelloFactory` invokes `this.props.onHello` that happens to be `App.gotHello`.
 
 
 Great way for components to communicate with each other
 
 
-Variation of the **callback pattern** that you learned in Node.js
-
-
-## EXERCICE
+## DEMO

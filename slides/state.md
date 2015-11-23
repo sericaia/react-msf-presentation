@@ -50,4 +50,5 @@ class Checkbox extends React.Component {
 **It's the *only* thing in your component that can trigger an update to the view**
 
 
-## EXERCICE
+## DEMO
+state

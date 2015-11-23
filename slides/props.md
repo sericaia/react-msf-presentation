@@ -105,7 +105,7 @@ Anchor.defaultProps = {
 <Anchor href='blog.yld.io'/>
 ```
 
-Is going to generate:
+V
 ```js
 <a href='blog.yld.io' target='_blank' />
 ```
@@ -171,3 +171,4 @@ Is going to generate:
 
 
 ### DEMO
+properties

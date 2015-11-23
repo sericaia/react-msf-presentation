@@ -25,49 +25,47 @@ Encapsulate logic
 
 
 ```js
-class Alert extends React.Component {
+class Phone extends React.Component {
   render() {
-    var classNames = [
-      'alert',
-      'alert-' + this.props.type,
-      'alert-dismissible'
-    ].join(' ');
-
-    return (<div className={classNames}>
-      <span>{this.props.msg}</span>
-    </div>);
+    return (
+      <li>{this.props.type} developed by {this.props.provider}</li>
+    );
   }
 };
 ```
 ```js
 class App extends React.Component {
   render() {
-    return (<div>
-      <Alert type='info' msg='Is this going to work?' />
-      <Alert type='success' msg='Well done!' />
-    </div>)
+    return (
+      <div>
+        <ul>
+          <Phone type='Windows Phone' provider='Microsoft' />
+          <Phone type='Android' provider='Google' />
+          <Phone type='iOS' provider='Apple' />
+        <ul>
+    </div>);
   }
 };
 ```
 
-Note: we are reducing the code we need to write because we are reusing the Alert component
+Note: we are reducing the code we need to write because we are reusing the Phone component
 
 
 ```js
-var alerts = [{
-  type: 'info',
-  msg: 'Is this going to work?'
+var phoneList = [{
+  type: 'Windows Phone',
+  provider: 'Microsoft'
 }, {
-  type: 'success',
-  msg: 'Well done!'
+  /* ... */
 }];
 ```
 ```js
 class App extends React.Component {
   render() {
     let tags = [];
-    for (let i in alerts) {
-      tags[i] = (<Alert type={alerts[i].type} msg={alerts[i].msg} />);
+    for (let i in phoneList) {
+      tags[i] = (<Phone type={phoneList[i].type}
+                        provider={phoneList[i].provider} />);
     }
 
     return (<div>{tags}</div>);
@@ -75,23 +73,23 @@ class App extends React.Component {
 };
 ```
 
-Note: we can make it better by programatically generate the `Alert` instances
+Note: we can make it better by programatically generate the `Phone` instances
 
 
 ```js
-var alerts = [{
-  type: 'info',
-  msg: 'Is this going to work?'
+var phoneList = [{
+  type: 'Windows Phone',
+  provider: 'Microsoft'
 }, {
-  type: 'success',
-  msg: 'Well done!'
+  /* ... */
 }];
 ```
 ```js
 class App extends React.Component {
   render() {
-    let tags = alerts.map(function(alert) {
-      return (<Alert type={alert.type} msg={alert.msg} />);
+    let tags = phoneList.map(function(phone) {
+      return (<Phone type={phoneList[i].type}
+                     provider={phoneList[i].provider} />);
     });
 
     return (<div>{tags}</div>);
@@ -103,19 +101,11 @@ Note: Now with a map we don't even need to manage the loop
 
 
 ```js
-var alerts = [{
-  type: 'info',
-  msg: 'Is this going to work?'
-}, {
-  type: 'success',
-  msg: 'Well done!'
-}];
-```
-```js
 class App extends React.Component {
   render() {
-    return (<div>{alerts.map(function(alert) {
-      return (<Alert type={alert.type} msg={alert.msg} />);
+    return (<div>{phoneList.map(function(phone) {
+      return (<Phone type={phoneList[i].type}
+                     provider={phoneList[i].provider} />);
     })}</div>);
   }
 };
@@ -124,4 +114,5 @@ class App extends React.Component {
 Note: We can inline expressions in jsx
 
 
-## EXERCICE
+## DEMO
+component composition

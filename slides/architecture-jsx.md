@@ -12,7 +12,8 @@ View in MVC
 ## React is fast due to its architecture
 
 
-## < Add architecture image />
+## Architecture
+![Image](./slides/images/architecture.png)
 
 
 ## React uses JSX syntax

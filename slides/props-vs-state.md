@@ -15,13 +15,6 @@ class Sum extends React.Component {
 };
 ```
 
-```
-let Sum = (a, b) => {
-  let sum = a + b;
-  return `${a} + ${b} = {this.state.sum}`;
-}
-```
-
 
 * **`props`**: function parameters
 * **`state`**: variables declared in the function scope
