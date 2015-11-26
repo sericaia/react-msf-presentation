@@ -34,7 +34,8 @@ module.exports = function(grunt) {
 		sass: {
 			core: {
 				files: {
-					'css/reveal.css': 'css/reveal.scss',
+					'css/extras.css': 'css/extras.scss',
+					'css/reveal.css': 'css/reveal.scss'
 				}
 			},
 			themes: {
@@ -52,14 +53,15 @@ module.exports = function(grunt) {
 
 		autoprefixer: {
 			dist: {
-				src: 'css/reveal.css'
+				src: ['css/extras.css', 'css/reveal.css']
 			}
 		},
 
 		cssmin: {
 			compress: {
 				files: {
-					'css/reveal.min.css': [ 'css/reveal.css' ]
+					'css/extras.min.css': [ 'css/extras.css' ],
+					'css/reveal.min.css': [ 'css/reveal.css']
 				}
 			}
 		},

@@ -33,3 +33,11 @@
 
  * [react-material](http://berkeleytrue.github.io/react-material/)
  * [material-ui](http://material-ui.com/)
+
+
+## Let's try...
+#### [React Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+
+
+## Thanks!
+Note: thanks for inviting me to be here

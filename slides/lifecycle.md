@@ -7,14 +7,15 @@ Hooking into the specific moments of the Component lifecycle
 ### Mounting
 
 
-#### `componentWillMount`
+<p class="lifecycle-header">componentWillMount</p>
 
-Invoked once, immediately before the initial rendering occurs. You can mutate the state that it will be reflected when rendered for the first time
+* Invoked once, immediately before the initial rendering occurs.
+* You can mutate the state that it will be reflected when rendered for the first time
 
 
-#### `componentDidMount`
+<p class="lifecycle-header">componentDidMount</p>
 
-Invoked once, **after** the being rendered for the first time and attached to the DOM.
+* Invoked once, **after** the being rendered for the first time and attached to the DOM.
 
 Note: You can use `componentDidMount` to start logic in the component, like some asynchronous data fetching, timers, etc.
 
@@ -29,7 +30,7 @@ class extends React.Component {
   }
   render() {
     console.log('component is rendering');
-    return (<h1>Heyo</h1>);
+    return (<h1>Hello, Webcamp!</h1>);
   }
 };
 ```
@@ -38,11 +39,9 @@ class extends React.Component {
 ### Updating
 
 
-Component instances can live even after you create render them again with new properties
+Component instances can live even after you render them again with new properties
 
-[(demo)](https://jsfiddle.net/xw6vgnkf/1/)
-
-Note: If you run this example, you will see that "Anchor mounted" will only be logged once even though `App.render` is called multiple times rendering `Anchor` with different `props`.  However, if you hook into the `componentWillReceiveProps` event in `Anchor`.
+Note: Mounting/Unmounting Demo - If you run this example, you will see that "Anchor mounted" will only be logged once even though `App.render` is called multiple times rendering `Anchor` with different `props`.  However, if you hook into the `componentWillReceiveProps` event in `Anchor`.
 
 
 ```js
@@ -83,32 +82,42 @@ Anchor is rendering
 React keeps track of each component instance
 
 
-#### `componentWillReceiveProps`
+<p class="lifecycle-header">componentWillReceiveProps</p>
 
-Invoked when a component instance is updated with new props. It's not invoked for the initial `render`, you can mutate the state without triggering another render
+* Invoked when a component instance is updated with new props
+* Not invoked in the initial `render`
 
-
-#### `shouldComponentUpdate`
-
-Invoked before re-rendering a component instance - either because it was updated or because the state was mutated with `setState`. With this method, you can decide whether it should render or not
+Note: you can mutate the state without triggering another render
 
 
-#### `componentWillUpdate`
+<p class="lifecycle-header">shouldComponentUpdate</p>
 
-Invoked immediately before re-rendering. The state cannot be mutated using `setState` in this method
+* Before re-rendering a component instance
+* Should the component render or not?
+
+Note: 1- either because it was updated or because the state was mutated with `setState`.
 
 
-#### `componentDidUpdate`
+<p class="lifecycle-header">componentWillUpdate</p>
 
-Invoked immediately after the component was re-rendered and the DOM reflects the new view
+* Immediately before re-rendering
+* The state cannot be mutated using `setState` in this method
+
+
+<p class="lifecycle-header">componentDidUpdate</p>
+
+* Immediately after the component was re-rendered and the DOM reflects the new view
 
 
 ### Unmounting
 
 
-#### `componentWillUnmount`
+<p class="lifecycle-header">componentWillUnmount</p>
 
-Invoked immediately before a component instance is unmounted from the DOM. very useful to do some cleanup in your component, like cleaning timers, or cancelling async operations.
+* Immediately before a component instance is unmounted from the DOM.
+* Useful to cleanup
+
+Note: 2 - like cleaning timers, or cancel async operations.
 
 
 ## Server vs Client
@@ -132,9 +141,7 @@ Invoked immediately before a component instance is unmounted from the DOM. very 
 ## Update
 
 `shouldComponentUpdate` > `componentWillUpdate` > `render` > `componentDidUpdate`
+<!-- ![](https://pbs.twimg.com/media/B-G3_T8CcAAmTHV.jpg:large) -->
 
 
-![](https://pbs.twimg.com/media/B-G3_T8CcAAmTHV.jpg:large)
-
-
-## EXERCICES
+## DEMO
