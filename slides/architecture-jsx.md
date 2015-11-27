@@ -8,8 +8,14 @@ View in MVC
 
 ## "JavaScript library for building user interfaces"
 
+Note: What is React?!
+ - created by facebook
+ - library, not framework
+
 
 ## React is fast due to its architecture
+
+Note: Instead of having observables through the objects that we want to modify (as other frameworks do), React updates the DOM based on which objects the programmer allows to have notifiers.
 
 
 ## Architecture
@@ -29,6 +35,10 @@ class PartyInfo extends React.Component {
 };
 ```
 
+Note: - similar to XML
+- what we are used to do in views
+- in the end, a transformation is done to turn JSX into JavaScript function calls
+
 
 ### React uses JSX syntax,
 ## but you don't need to use it
@@ -43,6 +53,10 @@ class PartyInfo extends React.Component {
 };
 ```
 
+Note: - first argument === null because there are no attributes in this div
+- second argument = content
+- third and so on - properties...
+
 
 ## React.Component
 ```js
@@ -52,6 +66,8 @@ class PartyInfo extends React.Component {};
 #### Component Class
 * Base class to create a react component using ES6
 * Implements a render() function
+
+Note: - Create a instance of a react component with the rendering
 
 
 ## JSX with arguments
@@ -63,6 +79,9 @@ class Hello extends React.Component {
 };
 ```
 
+Note: if we want to pass the name of the person, in JSX we will have something like this...
+
+
 ## Plain JS with element arguments
 ```js
 class Hello extends React.Component {
@@ -71,6 +90,8 @@ class Hello extends React.Component {
   }
 };
 ```
+
+Note: Using plain JavaScript, we need to add another argument to our div function. React will take care of this and will concatenate everything.
 
 
 ## What is generated?
@@ -81,7 +102,7 @@ class HelloWorld extends React.Component {
   }
 };
 
-React.render(<HelloWorld/>, document.getElementById('container'));
+ReactDOM.render(<HelloWorld/>, document.getElementById('container'));
 ```
 V
 ```html
@@ -94,9 +115,11 @@ V
 ```js
 /* ReactComponent render(ReactElement element,
     DOMElement container, [function callback]) */
-React.render(<HelloWorld/>, document.getElementById('container'));
+ReactDOM.render(<HelloWorld/>, document.getElementById('container'));
 ```
-**React.render()** controls the contents of the container node you pass in. Any existing DOM elements inside are replaced when first called.
+**ReactDOM.render()** controls the contents of the container node you pass in. Any existing DOM elements inside are replaced when first called.
+
+Note: React.render() does not modify the container node (only modifies the children of the container).
 
 <!--
 ```js
@@ -106,7 +129,7 @@ class HelloWorld extends React.Component {
   }
 };
 
-React.render(React.createElement(HelloWorld, null),
+ReactDOM.render(React.createElement(HelloWorld, null),
     document.getElementById('container'));
 ```
 ReactElement createElement(string/class type, [object props], [children ...]) -->

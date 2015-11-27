@@ -1,3 +1,5 @@
+<img src="./slides/images/react-logo.png" class="logo"/>
+
 # React
 ## from Zero to Hero
 

@@ -1,7 +1,41 @@
+body {
+  background: #4E8AA2 !important;
+  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #4E8AA2 100%) !important;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #4E8AA2)) !important;
+  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #4E8AA2 100%) !important;
+  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #4E8AA2 100%) !important;
+  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #4E8AA2 100%) !important;
+  background: radial-gradient(center, circle cover, #f7fbfc 0%, #4E8AA2 100%) !important;
+  background-color: #f7fbfc !important;
+}
+
 .lifecycle-header {
   font-size: 50px !important;
   font-weight: bold !important;
 
   margin-bottom: 70px !important;
   text-transform: none;
+}
+
+.lifecycle-header {
+  font-size: 50px !important;
+  font-weight: bold !important;
+  margin-bottom: 70px !important;
+  text-transform: none; }
+
+.reveal pre {
+  width: 95% !important;
+  padding: 5px !important;
+}
+
+.reveal pre code {
+  padding: 10px !important;
+  font-size: 110% !important;
+}
+
+.reveal section img.logo{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  width: 350px !important;
 }
