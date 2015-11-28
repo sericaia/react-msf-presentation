@@ -9,11 +9,16 @@
 ```js
 class Daniela extends React.Developer {
   YLD() {}
-  node/hapijs() {}
+  hapijs() {}
   photography() {}
   origami() {}
   socialNetworks() {
-    return (<Twitter tag="@sericaia" />);
+    return (
+      <div>
+        <Github tag="sericaia" />
+        <Twitter tag="@sericaia" />
+      </div>
+    );
   }
 };
 ```

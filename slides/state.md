@@ -51,4 +51,4 @@ class Checkbox extends React.Component {
 
 
 ## DEMO
-state
+State - Lamp

@@ -115,4 +115,4 @@ Note: We can inline expressions in jsx
 
 
 ## DEMO
-component composition
+Composition - Cutlery

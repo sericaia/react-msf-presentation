@@ -41,8 +41,6 @@ class extends React.Component {
 
 Component instances can live even after you render them again with new properties
 
-Note: Mounting/Unmounting Demo - If you run this example, you will see that "Anchor mounted" will only be logged once even though `App.render` is called multiple times rendering `Anchor` with different `props`.  However, if you hook into the `componentWillReceiveProps` event in `Anchor`.
-
 
 ```js
 class Anchor extends React.Component {
@@ -145,3 +143,7 @@ Note: 2 - like cleaning timers, or cancel async operations.
 
 
 ## DEMO
+* Mounting and Unmounting
+* Update
+
+Note: Mounting/Unmounting Demo - If you run this example, you will see that "Anchor mounted" will only be logged once even though `App.render` is called multiple times rendering `Anchor` with different `props`.  However, if you hook into the `componentWillReceiveProps` event in `Anchor`.

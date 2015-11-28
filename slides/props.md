@@ -50,6 +50,7 @@ class Anchor extends React.Component {
 let yldAddress = () => {
   return 'http://yld.io';
 };
+
 <Anchor href={yldAddress} />
 ```
 
@@ -171,4 +172,4 @@ Is going to generate:
 
 
 ### DEMO
-properties
+Properties - My Favourite Dish

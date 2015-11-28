@@ -3,10 +3,10 @@
 
 ## What is React?
 
-View in MVC
+#### View in MVC
 
 
-## "JavaScript library for building user interfaces"
+## JavaScript library for building user interfaces
 
 Note: What is React?!
  - created by facebook
@@ -20,6 +20,16 @@ Note: Instead of having observables through the objects that we want to modify (
 
 ## Architecture
 ![Image](./slides/images/architecture.png)
+
+
+## It seems awesome, how can I install it?
+
+* Using React from npm
+
+```js
+var React = require('react');
+var ReactDOM = require('react-dom');
+```
 
 
 ## React uses JSX syntax
