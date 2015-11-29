@@ -9,13 +9,14 @@ Hooking into the specific moments of the Component lifecycle
 
 <p class="lifecycle-header">componentWillMount</p>
 
-* Invoked once, immediately before the initial rendering occurs.
-* You can mutate the state that it will be reflected when rendered for the first time
+* Invoked once, immediately **before** the initial rendering occurs
+
+Note: You can mutate the state that it will be reflected when rendered for the first time
 
 
 <p class="lifecycle-header">componentDidMount</p>
 
-* Invoked once, **after** the being rendered for the first time and attached to the DOM.
+* Invoked once, **after** the being rendered for the first time and attached to the DOM
 
 Note: You can use `componentDidMount` to start logic in the component, like some asynchronous data fetching, timers, etc.
 
@@ -34,6 +35,10 @@ class extends React.Component {
   }
 };
 ```
+
+
+## DEMO
+* Mounting and Unmounting
 
 
 ### Updating
@@ -85,7 +90,7 @@ React keeps track of each component instance
 * Invoked when a component instance is updated with new props
 * Not invoked in the initial `render`
 
-Note: you can mutate the state without triggering another render
+Note: here you can mutate the state without triggering another render
 
 
 <p class="lifecycle-header">shouldComponentUpdate</p>
@@ -93,7 +98,8 @@ Note: you can mutate the state without triggering another render
 * Before re-rendering a component instance
 * Should the component render or not?
 
-Note: 1- either because it was updated or because the state was mutated with `setState`.
+Note: 1- either because it was updated (props or state) or because the state was mutated with `setState`.
+* shouldComponentUpdate: function(nextProps, nextState)
 
 
 <p class="lifecycle-header">componentWillUpdate</p>
@@ -118,32 +124,41 @@ Note: 1- either because it was updated or because the state was mutated with `se
 Note: 2 - like cleaning timers, or cancel async operations.
 
 
-## Server vs Client
-
-|                             | Server | Client |
-| --------------------------- |:------:|:------:|
-| `componentWillMount`        |    ✔   |    ✔   |
-| `componentDidMount`         |    ✘   |    ✔   |
-| `componentWillReceiveProps` |    ✔*  |    ✔   |
-| `shouldComponentUpdate`     |    ✔*  |    ✔   |
-| `componentWillUpdate`       |    ✔*  |    ✔   |
-| `componentDidUpdate`        |    ✔*  |    ✔   |
-| `componentWillUnmount`      |    ✔*  |    ✔   |
+## Lifecycle Summary
 
 
 ## Initial render
 
-`componentWillMount` > `render` > `componentDidMount`
+`componentWillMount`
+
+V
+
+`render`
+
+V
+
+`componentDidMount`
 
 
 ## Update
 
-`shouldComponentUpdate` > `componentWillUpdate` > `render` > `componentDidUpdate`
+`shouldComponentUpdate`
+
+V
+
+`componentWillUpdate`
+
+V
+
+`render`
+
+V
+
+`componentDidUpdate`
 <!-- ![](https://pbs.twimg.com/media/B-G3_T8CcAAmTHV.jpg:large) -->
 
 
 ## DEMO
-* Mounting and Unmounting
 * Update
 
 Note: Mounting/Unmounting Demo - If you run this example, you will see that "Anchor mounted" will only be logged once even though `App.render` is called multiple times rendering `Anchor` with different `props`.  However, if you hook into the `componentWillReceiveProps` event in `Anchor`.

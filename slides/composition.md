@@ -106,7 +106,7 @@ class App extends React.Component {
     return (<div>{phoneList.map(function(phone) {
       return (<Phone type={phoneList[i].type}
                      provider={phoneList[i].provider} />);
-    })}</div>);
+    })});
   }
 };
 ```

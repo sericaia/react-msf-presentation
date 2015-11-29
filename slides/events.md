@@ -53,7 +53,7 @@ class Anchor extends React.Component {
 Note: As you can see in this example, `HelloFactory` expects to receive an `onHello` property. That property should be a function. Then, it listens to the `onClick` event from the `<button>`. When an user clicks on the `<button>`, `HelloFactory.onClick` is invoked. There, `HelloFactory` invokes `this.props.onHello` that happens to be `App.gotHello`.
 
 
-Great way for components to communicate with each other
+ ### Great way for components to communicate with each other
 
 
 ## DEMO
