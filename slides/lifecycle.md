@@ -1,7 +1,6 @@
 ## Lifecycle
 
-
-Hooking into the specific moments of the Component lifecycle
+Note: Hooking into the specific moments of the Component lifecycle
 
 
 ### Mounting
@@ -11,14 +10,14 @@ Hooking into the specific moments of the Component lifecycle
 
 * Invoked once, immediately **before** the initial rendering occurs
 
-Note: You can mutate the state that it will be reflected when rendered for the first time
+Note: You can **mutate the state** that it will be reflected when rendered for the **first time**
 
 
 <p class="lifecycle-header">componentDidMount</p>
 
 * Invoked once, **after** the being rendered for the first time and attached to the DOM
 
-Note: You can use `componentDidMount` to start logic in the component, like some asynchronous data fetching, timers, etc.
+Note: You can use `componentDidMount` to start logic in the component, like some asynchronous **data fetching, timers**, etc.
 
 
 ```js

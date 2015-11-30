@@ -62,31 +62,6 @@ var phoneList = [{
 ```js
 class App extends React.Component {
   render() {
-    let tags = [];
-    for (let i in phoneList) {
-      tags[i] = (<Phone type={phoneList[i].type}
-                        provider={phoneList[i].provider} />);
-    }
-
-    return (<div>{tags}</div>);
-  }
-};
-```
-
-Note: we can make it better by programatically generate the `Phone` instances
-
-
-```js
-var phoneList = [{
-  type: 'Windows Phone',
-  provider: 'Microsoft'
-}, {
-  /* ... */
-}];
-```
-```js
-class App extends React.Component {
-  render() {
     let tags = phoneList.map(function(phone) {
       return (<Phone type={phoneList[i].type}
                      provider={phoneList[i].provider} />);
@@ -98,20 +73,6 @@ class App extends React.Component {
 ```
 
 Note: Now with a map we don't even need to manage the loop
-
-
-```js
-class App extends React.Component {
-  render() {
-    return (<div>{phoneList.map(function(phone) {
-      return (<Phone type={phoneList[i].type}
-                     provider={phoneList[i].provider} />);
-    })});
-  }
-};
-```
-
-Note: We can inline expressions in jsx
 
 
 ## DEMO

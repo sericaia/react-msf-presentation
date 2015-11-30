@@ -19,7 +19,7 @@ class Sum extends React.Component {
 * **`props`**: function parameters
 * **`state`**: variables declared in the function scope
 
-
+Note:
 * **`props`** is kind of a public API that each component exposes;
 * **`state`** is the internal and private values that a component needs to keep to  manage its logic.
 

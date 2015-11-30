@@ -1,9 +1,6 @@
 ## Community
 
 
-### `#reactjs` on IRC
-
-
 ### [Forum](https://discuss.reactjs.org)
 
 
@@ -40,4 +37,6 @@
 
 
 ## Thanks!
+Daniela Borges @sericaia
+
 Note: thanks for inviting me to be here

@@ -1,5 +1,13 @@
 ## Props
 
+Note:
+- stateless -> immutable data
+- faster
+- logic already implemented
+
+
+## Props
+
 ```js
 class Anchor extends React.Component {
   render() {
@@ -56,21 +64,6 @@ let yldAddress = () => {
 
 
 ### `this.props.children`
-
-```js
-class Anchor extends React.Component {
-  render() {
-    return (<a href={this.props.href}>{this.props.children}</a>);
-  }
-}
-```
-
-```js
-<Anchor href='http://yld.io'/><span>YLD!</span></Anchor>
-```
-
-`this.props.children == <span>YLD!</span>`
-
 
 ```js
 class Anchor extends React.Component {
@@ -164,6 +157,8 @@ Is going to generate:
 ```
 <a href='http://yld.io' target='_blank' />
 ```
+
+Note: explain ...props
 
 
 ### Imutability

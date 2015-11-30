@@ -26,11 +26,10 @@ class CommentList extends React.Component {
       }.bind(this)
     });
   }
-  renderComment({body, author}) {
-    return <li>{body}—{author}</li>;
-  }
   render() {
-    return <ul> {this.state.comments.map(renderComment)} </ul>;
+    return <ul> {this.state.comments.map(function(comment) {
+      <li>{comment}</li>
+    })} </ul>;
   }
 }
 ```
@@ -42,8 +41,8 @@ Note:
 
 
 ## Disadvantages of this approach
-- Reusability
-- Data structure
+- (less) Reusability
+- (less) Data structure
 
 <a href="https://medium.com/@learnreact/container-components-c0e67432e005" class="refs">Source: https://medium.com/@learnreact/container-components-c0e67432e005</a>
 
@@ -88,10 +87,9 @@ class CommentList extends React.Component {
     super(props);
   }
   render() {
-    return <ul> {this.props.comments.map(renderComment)} </ul>;
-  }
-  renderComment({body, author}) {
-    return <li>{body}—{author}</li>;
+    return <ul> {this.state.comments.map(function(comment) {
+      <li>{comment}</li>
+    })} </ul>;
   }
 }
 ```
@@ -103,7 +101,7 @@ Note: CommentList receive comments has a property
 ## Advantages
 * **Separation of concerns** - data fetching and rendering
 * CommentList is now **reusable**
-* CommentList could not have PropTypes **validation**
+<!-- * CommentList could not have PropTypes **validation** -->
 
 <a href="https://medium.com/@learnreact/container-components-c0e67432e005" class="refs">Source: https://medium.com/@learnreact/container-components-c0e67432e005</a>
 

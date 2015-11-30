@@ -21,6 +21,8 @@ Note: Instead of having observables through the objects that we want to modify (
 ## Architecture
 ![Image](./slides/images/architecture.png)
 
+Note: virtual-DOM is the one that is manipulated (not the DOM) and a comparison is made
+
 
 ## It seems awesome, how can I install it?
 
@@ -45,7 +47,8 @@ class PartyInfo extends React.Component {
 };
 ```
 
-Note: - similar to XML
+Note: - we are not used to this (controller and html in the same file)
+- similar to XML
 - what we are used to do in views
 - in the end, a transformation is done to turn JSX into JavaScript function calls
 
@@ -121,15 +124,7 @@ V
 </div>
 ```
 
-
-```js
-/* ReactComponent render(ReactElement element,
-    DOMElement container, [function callback]) */
-ReactDOM.render(<HelloWorld/>, document.getElementById('container'));
-```
-**ReactDOM.render()** controls the contents of the container node you pass in. Any existing DOM elements inside are replaced when first called.
-
-Note: React.render() does not modify the container node (only modifies the children of the container).
+Note: ReactDOM.render() does not modify the container node (only modifies the children of the container).
 
 <!--
 ```js
