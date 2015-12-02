@@ -52,3 +52,7 @@ class Checkbox extends React.Component {
 
 ## DEMO
 State - Lamp
+
+![Image](https://media0.giphy.com/media/ame1y0MJNqUPC/200.gif)
+
+<a href="https://media0.giphy.com/media/ame1y0MJNqUPC/200.gif" class="refs">GIF Source: https://media0.giphy.com/media/ame1y0MJNqUPC/200.gif</a>

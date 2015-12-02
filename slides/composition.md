@@ -77,3 +77,7 @@ Note: Now with a map we don't even need to manage the loop
 
 ## DEMO
 Composition - Cutlery
+
+![Image](http://45.media.tumblr.com/tumblr_m1pz91HyK81qm6sfao1_500.gif)
+
+<a href="http://45.media.tumblr.com/tumblr_m1pz91HyK81qm6sfao1_500.gif" class="refs">GIF Source: http://45.media.tumblr.com/tumblr_m1pz91HyK81qm6sfao1_500.gif</a>

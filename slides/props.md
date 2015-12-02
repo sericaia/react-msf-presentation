@@ -168,3 +168,7 @@ Note: explain ...props
 
 ### DEMO
 Properties - My Favourite Dish
+
+![Image](http://img.ifcdn.com/images/253ac6d948487bb5ac84a1b7e27197921c64e4b6b7d7ab73595b42b6c8265c81_1.gif)
+
+<a href="http://img.ifcdn.com/images/253ac6d948487bb5ac84a1b7e27197921c64e4b6b7d7ab73595b42b6c8265c81_1.gif" class="refs">GIF Source: http://img.ifcdn.com/images/253ac6d948487bb5ac84a1b7e27197921c64e4b6b7d7ab73595b42b6c8265c81_1.gif</a>

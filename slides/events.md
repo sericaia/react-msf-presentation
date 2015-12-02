@@ -58,3 +58,7 @@ Note: As you can see in this example, `HelloFactory` expects to receive an `onHe
 
 ## DEMO
 Events - Colors
+
+![Image](http://i.imgur.com/a66MjQ9.gif)
+
+<a href="http://i.imgur.com/a66MjQ9.gif" class="refs">GIF Source: http://i.imgur.com/a66MjQ9.gif</a>

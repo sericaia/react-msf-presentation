@@ -3,17 +3,23 @@
 Note: Hooking into the specific moments of the Component lifecycle
 
 
+## Lifecycle
+* Mounting
+* Update
+* Unmounting
+
+
 ### Mounting
 
 
-<p class="lifecycle-header">componentWillMount</p>
+<p class="lifecycle-header">componentWillMount ()</p>
 
 * Invoked once, immediately **before** the initial rendering occurs
 
 Note: You can **mutate the state** that it will be reflected when rendered for the **first time**
 
 
-<p class="lifecycle-header">componentDidMount</p>
+<p class="lifecycle-header">componentDidMount ()</p>
 
 * Invoked once, **after** the being rendered for the first time and attached to the DOM
 
@@ -39,7 +45,7 @@ class extends React.Component {
 ### Unmounting
 
 
-<p class="lifecycle-header">componentWillUnmount</p>
+<p class="lifecycle-header">componentWillUnmount ()</p>
 
 * Immediately before a component instance is unmounted from the DOM.
 * Useful to cleanup
@@ -92,7 +98,7 @@ Anchor is rendering
 React keeps track of each component instance
 
 
-<p class="lifecycle-header">componentWillReceiveProps</p>
+<p class="lifecycle-header">componentWillReceiveProps (<span class="lifecycle-header-params">object nextProps</span>)</p>
 
 * Invoked when a component instance is updated with new props
 * Not invoked in the initial `render`
@@ -100,7 +106,7 @@ React keeps track of each component instance
 Note: here you can mutate the state without triggering another render
 
 
-<p class="lifecycle-header">shouldComponentUpdate</p>
+<p class="lifecycle-header">shouldComponentUpdate (<span class="lifecycle-header-params">object nextProps, object nextState</span>)</p>
 
 * Before re-rendering a component instance
 * Should the component render or not?
@@ -109,13 +115,13 @@ Note: 1- either because it was updated (props or state) or because the state was
 * shouldComponentUpdate: function(nextProps, nextState)
 
 
-<p class="lifecycle-header">componentWillUpdate</p>
+<p class="lifecycle-header">componentWillUpdate (<span class="lifecycle-header-params">object nextProps, object nextState</span>)</p>
 
 * Immediately before re-rendering
 * The state cannot be mutated using `setState` in this method
 
 
-<p class="lifecycle-header">componentDidUpdate</p>
+<p class="lifecycle-header">componentDidUpdate (<span class="lifecycle-header-params">object prevProps, object prevState</span>)</p>
 
 * Immediately after the component was re-rendered and the DOM reflects the new view
 
@@ -156,5 +162,9 @@ V
 
 ## DEMO
 * Update
+
+![Image](http://media2.giphy.com/media/hsBZfDG7wiWHu/giphy.gif)
+
+<a href="http://media2.giphy.com/media/hsBZfDG7wiWHu/giphy.gif" class="refs">GIF Source: http://media2.giphy.com/media/hsBZfDG7wiWHu/giphy.gif</a>
 
 Note: Mounting/Unmounting Demo - If you run this example, you will see that "Anchor mounted" will only be logged once even though `App.render` is called multiple times rendering `Anchor` with different `props`.  However, if you hook into the `componentWillReceiveProps` event in `Anchor`.

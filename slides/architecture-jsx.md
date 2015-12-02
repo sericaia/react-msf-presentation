@@ -142,4 +142,8 @@ ReactElement createElement(string/class type, [object props], [children ...]) --
 
 ## Demo
 Webcamp Component
+
+![Image](https://media.giphy.com/media/ToMjGpl5HjuyzJ6O304/giphy.gif)
+
+<a href="https://media.giphy.com/media/ToMjGpl5HjuyzJ6O304/giphy.gif" class="refs">GIF Source: https://media.giphy.com/media/ToMjGpl5HjuyzJ6O304/giphy.gif</a>
 <!-- how to create a component with es5 and es6 -->

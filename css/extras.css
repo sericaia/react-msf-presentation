@@ -14,6 +14,10 @@ body {
   margin-bottom: 70px !important;
   text-transform: none; }
 
+.lifecycle-header-params {
+  color: #3B759E !important;
+}
+
 .reveal pre {
   width: 95% !important;
   padding: 5px !important;
