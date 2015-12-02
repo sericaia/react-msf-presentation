@@ -36,14 +36,22 @@ class extends React.Component {
 ```
 
 
+### Unmounting
+
+
+<p class="lifecycle-header">componentWillUnmount</p>
+
+* Immediately before a component instance is unmounted from the DOM.
+* Useful to cleanup
+
+Note: 2 - like cleaning timers, or cancel async operations.
+
+
 ## DEMO
 * Mounting and Unmounting
 
 
 ### Updating
-
-
-Component instances can live even after you render them again with new properties
 
 
 ```js
@@ -110,17 +118,6 @@ Note: 1- either because it was updated (props or state) or because the state was
 <p class="lifecycle-header">componentDidUpdate</p>
 
 * Immediately after the component was re-rendered and the DOM reflects the new view
-
-
-### Unmounting
-
-
-<p class="lifecycle-header">componentWillUnmount</p>
-
-* Immediately before a component instance is unmounted from the DOM.
-* Useful to cleanup
-
-Note: 2 - like cleaning timers, or cancel async operations.
 
 
 ## Lifecycle Summary

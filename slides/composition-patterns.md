@@ -87,7 +87,7 @@ class CommentList extends React.Component {
     super(props);
   }
   render() {
-    return <ul> {this.state.comments.map(function(comment) {
+    return <ul> {this.props.comments.map(function(comment) {
       <li>{comment}</li>
     })} </ul>;
   }
@@ -139,9 +139,3 @@ Note:
 2. use same dumb component with different state sources
 3. designers don't need to be concerned about logic
 4. layout component - e.g navigation menu
-
-
-## Dumb vs Smart conclusion
-> Components don’t have to emit DOM. They only need to provide composition boundaries between UI concerns.
-
-<a href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0" class="refs">Source: https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0</a>
